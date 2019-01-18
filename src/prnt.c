@@ -6,12 +6,11 @@
 /*   By: llelias <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/19 15:31:21 by llelias           #+#    #+#             */
-/*   Updated: 2019/01/08 04:28:53 by llelias          ###   ########.fr       */
+/*   Updated: 2019/01/17 21:19:34 by vlahorba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
-
 
 static void		print_map(int dim, char map[dim][dim])
 {
