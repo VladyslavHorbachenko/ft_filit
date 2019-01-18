@@ -12,7 +12,6 @@
 
 #include "fillit.h"
 
-
 /*
 ** t_check(t_env e) will check the array of peices in enviornment e.
 ** It will check how many peices are still available to be placed. This is
