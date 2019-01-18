@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: llelias <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: vlahorba <vlahorba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/19 15:38:19 by llelias           #+#    #+#             */
-/*   Updated: 2019/01/17 17:04:24 by llelias          ###   ########.fr       */
+/*   Updated: 2019/01/17 22:20:57 by vlahorba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-int		fillit(char *file, int alg)
+int		fillit(char *file)
 {
 	int		dim;
 	t_env	*e;
@@ -21,12 +21,8 @@ int		fillit(char *file, int alg)
 	e = c_env(dim, file);
 	dim = ft_nsqr(e->nop_m * 4);
 	change_dim(e, dim);
-	if (alg)
-		while ((!solve_ll(*e, 0, 0, 0)))
-			change_dim(e, e->dim + 1);
-	else
-		while ((!solve_sh(*e, 0)))
-			change_dim(e, e->dim + 1);
+	while ((!solve_sh(*e, 0)))
+		change_dim(e, e->dim + 1);
 	make_map(*e);
 	return (0);
 }
@@ -40,22 +36,16 @@ int		fillit(char *file, int alg)
 int		main(int argc, char **argv)
 {
 	char	*file;
-	int		alg;
 	int		flag;
 
 	flag = 1;
-	alg = 0;
 	if (flag)
 	{
 		if (argc != 2)
 			usage();
 	}
-	else
-	{
-		if (argc != 3)
-			usage();
-		alg = ft_atoi(argv[2]);
-	}
+	else if (argc != 3)
+		usage();
 	file = argv[1];
-	return (fillit(file, alg));
+	return (fillit(file));
 }

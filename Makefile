@@ -1,8 +1,8 @@
 NAME = fillit
 
-SRC = src/main.c src/solve_sh.c src/prnt.c src/mnp.c src/error.c src/env.c src/solve_ll.c
+SRC = src/solve_ll.c src/main.c src/solve_sh.c src/prnt.c src/mnp.c src/error.c src/env.c
 
-OBJ = main.o solve_sh.o prnt.o mnp.o error.o env.o solve_ll.o
+OBJ = solve_ll.o main.o solve_sh.o prnt.o mnp.o error.o env.o
 
 INC = -I ../filit.h
 

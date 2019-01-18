@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fillit.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: llelias <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: vlahorba <vlahorba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/19 11:31:24 by llelias           #+#    #+#             */
-/*   Updated: 2019/01/08 04:30:30 by llelias          ###   ########.fr       */
+/*   Updated: 2019/01/17 22:17:28 by vlahorba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ typedef struct	s_env
 int				t_check(t_env e);
 int				solve_sh(t_env e, int i);
 void			usage(void);
-int				solve_ll(t_env e, int num, int r, int c);
 t_env			*c_env(int dim, char *file);
 void			change_dim(t_env *e, int dim);
 int				fits(t_env e, int num, int r, int c);
